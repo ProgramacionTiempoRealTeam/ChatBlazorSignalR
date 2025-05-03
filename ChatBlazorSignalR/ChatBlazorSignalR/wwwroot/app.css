@@ -67,17 +67,17 @@ h1:focus {
     font-size: 14px;
 }
 
-    .chat-bubble::after {
-        content: "";
-        position: absolute;
-        left: -9px;
-        top: 10px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent #1d8ff0 transparent transparent;
-    }
+.chat-bubble::after {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #1d8ff0 transparent transparent;
+}
 
 .chat-container.right {
     justify-content: flex-end;
@@ -87,12 +87,12 @@ h1:focus {
     background-color: #37c084;
 }
 
-    .chat-bubble.right::after {
-        left: auto;
-        right: -9px;
-        border-width: 10px 0 10px 10px;
-        border-color: transparent transparent transparent #37c084;
-    }
+.chat-bubble.right::after {
+     left: auto;
+     right: -9px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #37c084;
+}
 
 .chat-h {
     max-height: 450px;

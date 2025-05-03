@@ -20,6 +20,7 @@
 		{
 			if (Messages.Count> 0)
 			{
+			<div class="scroll-box p-3 border rounded bg-light chat-h">
 
 				@foreach (var chat in Messages)
 				{
@@ -27,9 +28,13 @@
 						<div class="chat-bubble @chat.Direction">
 							<div class="fw-bold">@chat.User	</div>
 							@chat.Message
+							<div class="text-muted" style="font-size: 0.8rem; color: white;">@chat.Time.ToString("HH:mm:ss")</div>
+
 						</div>
 					</div>
 				}
+				
+			</div>
 			}
 		}
 		<div class="mt-3">
@@ -53,8 +58,9 @@
 		// await Task.Delay(1000);
 		Messages = new List<Chat>
 		{
-			new Chat { User = "User1", Message = "Hello!", IsMe=true },
-			new Chat { User = "User2", Message = "Hi there!", IsMe=false }
+			new Chat { User = "User1", Message = "Hello!", IsMe = true, Time = DateTime.Now.AddMinutes(-5) },
+			new Chat { User = "User2", Message = "Hi there!", IsMe = false, Time = DateTime.Now.AddMinutes(-3) }
+
 		};
 		await base.OnInitializedAsync();
 		return;
